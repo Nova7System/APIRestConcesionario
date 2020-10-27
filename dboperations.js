@@ -11,10 +11,11 @@ async function getQuotations() {
         console.log(error);
     }
 }
-
+// Metodo de inserción a la DB
 async function addQuotation(quotation) {
 
     try {
+
         let pool = await sql.connect(config);
         let insertQuotation = await pool.request()
             
